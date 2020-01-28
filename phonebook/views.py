@@ -6,9 +6,6 @@ def whole_list(request):
     whole_data = r.json()['contacts']
     search_query = request.GET.get('search_query', None)
     topic = request.GET.get('topic', None)
-    print('what in need to see')
-    print(search_query)
-    print(topic)
     if search_query is None:
         return render(request, 'home.html', {'whole_data': whole_data})
     else:
