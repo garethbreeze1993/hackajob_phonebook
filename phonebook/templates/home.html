@@ -1,0 +1,21 @@
+<form method='GET'>
+Search:<br>
+  <input type="text" name="search_query" value="">
+  <br>
+   <input type="radio" name="topic" value="name" checked> Name<br>
+  <input type="radio" name="topic" value="phone_number"> Number<br>
+  <input type="radio" name="topic" value="address"> Address
+  <br>
+  <input type="submit" value="Submit">
+</form>
+
+<h1>THis template is mapped</h1>
+
+{% for data in whole_data %}
+
+   <p>Name: {{data.name}}</p>
+   <p>Phone Number: {{data.phone_number}}</p>
+   <p>Address: {{data.address}}</p>
+   
+
+{% endfor %}
