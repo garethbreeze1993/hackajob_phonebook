@@ -19,5 +19,5 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.whole_list)
+    path('', views.whole_list, name='whole_list')
 ]

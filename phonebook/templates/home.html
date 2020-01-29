@@ -19,3 +19,14 @@ Search:<br>
    
 
 {% endfor %}
+ 
+<a href="#" id="reload">Click to reload without query string</a>
+
+        <script>
+            document.getElementById("reload").onclick = function() {reload()};
+
+            function reload() {
+                window.location = window.location.href.split("?")[0];
+            }
+        </script>
+

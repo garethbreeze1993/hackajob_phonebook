@@ -11,7 +11,7 @@ def whole_list(request):
     else:
         searched_data = []
         for data in whole_data:
-            if search_query in data[topic]:
+            if search_query.lower() in data[topic].lower():
                 searched_data.append(data)
         return render(request, 'home.html', {'whole_data': searched_data})
 
